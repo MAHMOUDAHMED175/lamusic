@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "470535910424",
+    "project_id": "la-music-8551f",
+    "storage_bucket": "la-music-8551f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470535910424:android:e41ff954fa8ae409a47f6d",
+        "android_client_info": {
+          "package_name": "com.example.lamusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "470535910424-g2jdi5cfh6qancqjvrubmm1qhp0ved5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lamusic",
+            "certificate_hash": "2a1bf00f7b22a4dc55f3c9846b1ce69eb88da7e6"
+          }
+        },
+        {
+          "client_id": "470535910424-6vvofo5mhjr79luprhromfkebkdks1hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTLa6eTNZ5EVSmqeBz1ew7YCVllVUThZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "470535910424-6vvofo5mhjr79luprhromfkebkdks1hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
