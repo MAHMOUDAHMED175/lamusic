@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
 
-// import 'package:just_audio_background/just_audio_background.dart';
 import 'package:lamusic/core/utils/colors.dart';
-import 'package:lamusic/features/home/presentation/view/widgets/music_widget/bottomPlayer.dart';
 import 'package:lamusic/core/widgets/kText.dart';
+import 'package:lamusic/features/home/presentation/view/widgets/music_widget/bottomPlayer.dart';
 import 'package:lamusic/features/home/presentation/view/widgets/music_widget/searchbox.dart';
 import 'package:lamusic/features/home/presentation/view/widgets/music_widget/song_player.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import 'package:provider/provider.dart';
+
 // جمع جميع الملفات من جميع المجلدات والفولدرات باستخدام حزمة file_picker
 // List<PlatformFile> allFiles = (await FilePicker.platform.pickFiles(
 //   type: FileType.custom, allowedExtensions: ['mp4', 'avi', 'mov'],allowMultiple: true,
@@ -25,9 +25,9 @@ import '../../../../core/widgets/loading.dart';
 import '../view_model/provider/song_data.dart';
 
 class SongsView extends StatefulWidget {
+  SongsView({Key? key, required this.songsLength}) : super(key: key);
+  int songsLength;
 
-  SongsView({Key? key,required this.songsLength}) : super(key: key);
-int songsLength;
   @override
   State<SongsView> createState() => _SongsViewState();
 }
@@ -38,7 +38,6 @@ class _SongsViewState extends State<SongsView> {
 
   @override
   Widget build(BuildContext context) {
-
     var songData = Provider.of<SongData>(context);
     var songList = [];
 
@@ -61,7 +60,7 @@ class _SongsViewState extends State<SongsView> {
         );
       } on Exception {
         ScaffoldMessenger.of(context).showSnackBar(
-           SnackBar(
+          SnackBar(
             backgroundColor: ColorsApp.orangeColor,
             content: Text(
               'Song can not play!',
@@ -299,8 +298,8 @@ class _SongsViewState extends State<SongsView> {
                                                 songs[index].id)
                                               {
                                                 _loadNewSongOnTrack(
-                                                    songs[index], songs,
-
+                                                  songs[index],
+                                                  songs,
                                                 )
                                               }
                                             else

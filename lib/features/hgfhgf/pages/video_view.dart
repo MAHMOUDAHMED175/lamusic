@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 
-import '../../../../core/utils/colors.dart';
-
 class VideoView extends StatefulWidget {
   final File video;
   const VideoView({super.key, required this.video});
@@ -23,6 +21,7 @@ class _VideoViewState extends State<VideoView> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     videoPlayerController = VideoPlayerController.file(
       File(
         widget.video.path,
@@ -55,11 +54,6 @@ class _VideoViewState extends State<VideoView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: ColorsApp.blackColor,
-        leading: IconButton(onPressed: (){
-          Navigator.pop(context);
-        },icon: Icon(Icons.arrow_back_ios,color: Colors.white,))),
       body: Center(
         child: videoPlayerController.value.isInitialized
             ? GestureDetector(

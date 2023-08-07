@@ -105,7 +105,7 @@ class _MyAppState extends State<MyApp> {
                     Navigator.of(context).pop();
                   },
                   child: const Text(
-                    'Retry',
+                    'hjgt',
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -136,7 +136,7 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         theme: darkTheme,
-        // home:HomePage(),
+        // home:Home(),
         home: widget.widget,
         debugShowCheckedModeBanner: false,
       ),
